@@ -26,7 +26,11 @@ def registerSensors():
     client.publish(f"homeassistant/sensor/{room.lower()}/CPUTemp/config", json.dumps(config))
 
 registerSensors()
+loopCount = 0
 while True:
+    loopCount += 1
+    if loopCount % 12 == 0:
+        registerSensors()
     temps = psutil.sensors_temperatures()
     cpuTemp = 0
     for name, entries in temps.items():
