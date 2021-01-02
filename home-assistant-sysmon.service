@@ -1,0 +1,11 @@
+[Unit]
+Description=Raspberry Pi System Monitor for Home Assistant
+After=network-online.target
+ 
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/projects/home-assistant-sysmon/home-assistant-sysmon.py
+User=pi
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
