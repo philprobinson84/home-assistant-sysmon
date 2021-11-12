@@ -4,7 +4,7 @@ import json
 import psutil
 from time import sleep
 
-mqttBroker ="192.168.1.187" 
+mqttBroker ="192.168.1.100" 
 room = socket.gethostname()
 
 client = mqtt.Client(f"{room} SysMon")

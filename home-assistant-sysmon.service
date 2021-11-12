@@ -3,6 +3,7 @@ Description=Raspberry Pi System Monitor for Home Assistant
 After=network-online.target
  
 [Service]
+ExecStartPre=/bin/sleep 30
 ExecStart=/usr/bin/python3 /home/pi/projects/home-assistant-sysmon/home-assistant-sysmon.py
 User=pi
 Restart=always
