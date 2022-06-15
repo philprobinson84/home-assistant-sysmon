@@ -4,8 +4,8 @@ After=network-online.target
  
 [Service]
 ExecStartPre=/bin/sleep 30
-ExecStart=/usr/bin/python3 /home/pi/projects/home-assistant-sysmon/home-assistant-sysmon.py
-User=pi
+ExecStart=/usr/bin/python3 /usr/bin/home-assistant-sysmon.py
+User=root
 Restart=always
  
 [Install]
